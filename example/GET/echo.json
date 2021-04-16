@@ -1,0 +1,11 @@
+{
+  "headers": function ({ _req }) {
+    return _req.headers;
+  },
+  "url": function ({ _req }) {
+    return _req.url;
+  },
+  "query": function ({ _req }) {
+    return _req.query;
+  }
+}

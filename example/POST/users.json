@@ -1,0 +1,7 @@
+{
+  "id": "@integer(60, 100)",
+  "name": "@cname",
+  "birthday": "@date",
+  "address": "@city()",
+  "postcode": "@zip"
+}
