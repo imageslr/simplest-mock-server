@@ -10,6 +10,8 @@ Simplest Mock Server 是一个开箱即用的搭建本地 mock 接口的工具�
    * `--dir example`：接口配置目录
    * `--port 3000`：服务启动端口
 
+如果在 mac 启动时报错：“无法打开 fse.node：来自身份不明的开发者“，请前往“系统设置 - 安全性与隐私 - 通用 - 允许从以下位置下载的 App”，点击“仍然允许“，然后再次执行 `gulp mock`。
+
 ## 配置接口
 
 ### 目录规范
@@ -144,6 +146,9 @@ Mock.js 允许将某个属性的值设置为一个 `Function`（[文档](http://
   },
   "query": function ({ _req }) {
     return _req.query;
+  },
+  "mock": function ({ Mock }) {
+    return Mock.mock("@integer(60, 100)");
   }
 }
 ```
@@ -159,7 +164,8 @@ Mock.js 允许将某个属性的值设置为一个 `Function`（[文档](http://
     // ...
   },
   "url": "/echo?param=123",
-  "query": { "param": "123" }
+  "query": { "param": "123" },
+  "mock": 78
 }
 ```
 
@@ -206,7 +212,7 @@ Mock.js 允许将某个属性的值设置为一个 `Function`（[文档](http://
 
 **指定接口配置的根目录：**
 
-我们可以在此仓库下，为不同的项目创建多个目录：
+可以在此仓库下，为不同的项目创建多个目录：
 ```
 simplest-mock-server
 ├── example           // 示例项目的配置
