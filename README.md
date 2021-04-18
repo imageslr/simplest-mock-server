@@ -1,6 +1,17 @@
-# Simplest Mock Server 
+# Simplest Mock Server
 
 Simplest Mock Server 是一个开箱即用的搭建本地 mock 接口的工具。支持 RESTful 占位符，支持 [mockjs](http://mockjs.com/)，提供基于请求的[动态化能力](#responsive)。简单、轻量。
+
+## 目录
+- [安装与启动](#安装与启动)
+- [配置接口](#配置接口)
+  - [目录规范](#目录规范)
+  - [新增接口](#新增接口)
+  - [文件内容](#文件内容)
+- [响应式数据](#响应式数据)
+- [自定义 HTTP 状态码、Cookie、Header](#自定义-http-状态码cookieheader)
+- [常见问题](#常见问题)
+
 
 ## 安装与启动
 
